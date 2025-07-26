@@ -1,0 +1,6 @@
+from typing import Any, Protocol
+
+
+class IJsonIOManager(Protocol):
+    def read(self, path: str) -> dict[Any, Any]: ...
+    def write(self, content: dict[Any, Any], path: str): ...
